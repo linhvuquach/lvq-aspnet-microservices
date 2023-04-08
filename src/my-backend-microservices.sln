@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatformService", "Services
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Services\Identity\Identity.csproj", "{FEB2C718-125B-499F-9CAC-DB306AE39E38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsService", "Services\CommandsService\CommandsService.csproj", "{63B0D348-497A-44AC-B6D6-6418F7410C2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{FEB2C718-125B-499F-9CAC-DB306AE39E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEB2C718-125B-499F-9CAC-DB306AE39E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEB2C718-125B-499F-9CAC-DB306AE39E38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B0D348-497A-44AC-B6D6-6418F7410C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B0D348-497A-44AC-B6D6-6418F7410C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B0D348-497A-44AC-B6D6-6418F7410C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B0D348-497A-44AC-B6D6-6418F7410C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{57CA1808-9F22-4FB2-BC1E-02194AFFDE16} = {0C410739-ECE0-4E8C-85E4-3B7DB53CFB10}
 		{FEB2C718-125B-499F-9CAC-DB306AE39E38} = {0C410739-ECE0-4E8C-85E4-3B7DB53CFB10}
+		{63B0D348-497A-44AC-B6D6-6418F7410C2E} = {0C410739-ECE0-4E8C-85E4-3B7DB53CFB10}
 	EndGlobalSection
 EndGlobal
