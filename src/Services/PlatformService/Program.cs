@@ -8,8 +8,23 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<AppDbContext>(opt =>
-                     opt.UseInMemoryDatabase("InMem"));
+// Database
+if (builder.Environment.IsProduction())
+{
+    Console.WriteLine("Using sql sever DB");
+    builder.Services.AddDbContext<AppDbContext>(opt =>
+                         opt.UseSqlServer(builder.Configuration.GetConnectionString("PlatformsConn")));
+}
+else
+{
+    // Console.WriteLine("Using in memory database");
+    // builder.Services.AddDbContext<AppDbContext>(opt =>
+    //                      opt.UseInMemoryDatabase("InMem"));
+
+    Console.WriteLine("Using sql sever DB Local");
+    builder.Services.AddDbContext<AppDbContext>(opt =>
+                         opt.UseSqlServer(builder.Configuration.GetConnectionString("PlatformsConn")));
+}
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 
