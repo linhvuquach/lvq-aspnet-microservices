@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.SyncDataServices.Http;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,9 +26,10 @@ else
                          opt.UseSqlServer(builder.Configuration.GetConnectionString("PlatformsConn")));
 }
 
+// SERVICES
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
-
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+builder.Services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
