@@ -1,3 +1,4 @@
+using CommandsService.AsyncDataServices;
 using CommandsService.Data;
 using CommandsService.EventProcessing;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMen"));
 builder.Services.AddScoped<ICommandRepo, CommandRepo>();
+builder.Services.AddHostedService<MessageBusSubcriber>();
 builder.Services.AddSingleton<IEventProcessor, EventProcessing>();
 
 builder.Services.AddControllers();
