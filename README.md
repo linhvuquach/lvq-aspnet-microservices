@@ -71,3 +71,4 @@ References:
 - [ ] Implement Identiy Service
 - [ ] Implement Log service (use Elastic search)
 - [ ] Implement [Cache] service (use Redis cache)
+- [ ] Testing 
