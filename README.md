@@ -13,6 +13,18 @@ This repo was inspired by [Les Jackson](https://lesjackson.net/home). Building b
 ## Solution Architecture
 ![image](https://user-images.githubusercontent.com/26388126/231938119-2e9d7d46-e339-47cd-a70b-b677c6079e9f.png)
 
+## How to start
+- Deploy Platforms Service: kubectl apply -f platforms-depl.yaml
+- Deploy Commands Service: kubectl apply -f commands-depl.yaml
+- Deploy Platform NodePort Service: kubectl apply -f platforms-np-srv.yaml
+- Deploy Platform API gateway/load balancer: kubectl apply -f ingress-srv.yaml
+- Deploy PersistentVolumn, MSSQL server:
+  - PersistentVolumn: kubectl apply -f local-pvc.yaml
+  - MSSQL server:
+    - Create k8s secret: kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
+    - Deploy k8s MSSQL server service: kubectl apply -f mssql-plat-depl.yaml
+- Deploy RabbitMQ service: kubectl apply -f rabbitmq-depl.yaml
+
 ## The progress building
 ### Platforms Service
 - [x]  Start services
