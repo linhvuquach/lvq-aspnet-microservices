@@ -26,7 +26,7 @@ This repo was inspired by [Les Jackson](https://lesjackson.net/home). Building b
 - [x] Adding HTTP client
 - [x] Containerize CommandsService (2nd service)
 
-### Deploying
+### Continue building
 - [x] Deploying services to K8s
 - [x] Adding an API gateway (Ingress controller) 
 
