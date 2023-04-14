@@ -1,6 +1,6 @@
 # lvq-aspnet-microservices
 
-This repo was inspired by Les Jackson. Building basic about .NET Microservices system.
+This repo was inspired by [Les Jackson](https://lesjackson.net/home). Building basic about .NET Microservices system.
 
 ## What are building
 - Building two .NET Microservices using the REST API pattern
