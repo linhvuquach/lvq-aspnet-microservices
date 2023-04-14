@@ -79,6 +79,7 @@ References:
   - [x] Adding a gRPC server to Platforms Service
   - [x] Adding a  gRPC client to Commands Service
 
+- [ ] Deploy with k8s/helm chart
 - [ ] Write Docker compose
 - [ ] Implement Identiy Service
 - [ ] Implement Log service (use Elastic search)
