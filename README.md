@@ -10,6 +10,9 @@ This repo was inspired by Les Jackson. Building basic about .NET Microservices s
 - Building Synchronous messaging between services (HTTP and gRPC)
 - Building Asynchronous messaging between services using an Even Bus (RabbitMQ)
 
+## Solution Architecture
+![image](https://user-images.githubusercontent.com/26388126/231938119-2e9d7d46-e339-47cd-a70b-b677c6079e9f.png)
+
 ## The progress building
 ### Platforms Service
 - [x]  Start services
